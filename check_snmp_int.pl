@@ -784,14 +784,14 @@ for (my $i=0;$i < $num_int; $i++) {
 	    }
 	  }
 	} else { # output in octet counter
-      $perf_out .= "'" . $descr[$i] ."_in_octet'=". $$result{$oid_perf_inoct[$i]} ."c ";  
-      $perf_out .= "'" . $descr[$i] ."_out_octet'=". $$result{$oid_perf_outoct[$i]} ."c ";  
+      $perf_out .= "'" . $descr[$i] ."_in_octet'=". $$result{$oid_perf_inoct[$i]} ."c;;;0; ";  
+      $perf_out .= "'" . $descr[$i] ."_out_octet'=". $$result{$oid_perf_outoct[$i]} ."c;;;0; ";  
 	}
     if (defined ($o_perfe)) {
-      $perf_out .= "'" . $descr[$i] ."_in_error'=". $$result{$oid_perf_inerr[$i]} ."c ";
-      $perf_out .= "'" . $descr[$i] ."_in_discard'=". $$result{$oid_perf_indisc[$i]} ."c ";
-      $perf_out .= "'" . $descr[$i] ."_out_error'=". $$result{$oid_perf_outerr[$i]} ."c ";
-      $perf_out .= "'" . $descr[$i] ."_out_discard'=". $$result{$oid_perf_outdisc[$i]} ."c ";
+      $perf_out .= "'" . $descr[$i] ."_in_error'=". $$result{$oid_perf_inerr[$i]} ."c;;;0; ";
+      $perf_out .= "'" . $descr[$i] ."_in_discard'=". $$result{$oid_perf_indisc[$i]} ."c;;;0; ";
+      $perf_out .= "'" . $descr[$i] ."_out_error'=". $$result{$oid_perf_outerr[$i]} ."c;;;0; ";
+      $perf_out .= "'" . $descr[$i] ."_out_discard'=". $$result{$oid_perf_outdisc[$i]} ."c;;;0; ";
     }
 	if (defined ($o_perfs)) {
 	  $perf_out .= "'" . $descr[$i] ."_speed_bps'=".$speed_real; 
